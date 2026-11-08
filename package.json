@@ -15,7 +15,7 @@
   "keywords": [],
   "author": "Vladyslav Semenchenko <vsemencenko@gmail.com>",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/tngroo/nodejs-hw/issues"
   },
