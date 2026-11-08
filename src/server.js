@@ -7,7 +7,14 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
-app.use(logger());
+app.use(
+  logger({
+    transport: {
+      target: 'pino-pretty',
+      options: { colorize: true },
+    },
+  }),
+);
 
 app.get('/test-error', () => {
   throw new Error('Simulated server error');
