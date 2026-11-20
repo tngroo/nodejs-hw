@@ -12,8 +12,8 @@ export const getAllNotes = async (req, res) => {
 
   if (search !== undefined) {
     filter.$or = [
-      { title: { $regex: RegExp.escape(search), $options: 'i' } },
-      { content: { $regex: RegExp.escape(search), $options: 'i' } },
+      { title: { $regex: search, $options: 'i' } },
+      { content: { $regex: search, $options: 'i' } },
     ];
   }
 

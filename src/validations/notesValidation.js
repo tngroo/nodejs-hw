@@ -18,9 +18,9 @@ const objectIdValidator = (value, helpers) => {
   return helpers.message('помилка валідації id');
 };
 export const noteIdSchema = {
-  [Segments.PARAMS]: {
+  [Segments.PARAMS]: Joi.object({
     noteId: Joi.string().custom(objectIdValidator).required(),
-  },
+  }),
 };
 
 export const createNoteSchema = {
