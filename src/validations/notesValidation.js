@@ -15,7 +15,7 @@ const objectIdValidator = (value, helpers) => {
   if (isValidObjectId(value)) {
     return value;
   }
-  return helpers.message('помилка валідації id');
+  return helpers.message('Invalid noteId');
 };
 export const noteIdSchema = {
   [Segments.PARAMS]: Joi.object({
